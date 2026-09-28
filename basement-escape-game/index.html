@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Basement Escape | Monica Abeyta</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #08101f;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .game-page {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .back-link {
+            color: #1597ff;
+            display: inline-block;
+            margin-bottom: 25px;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #8f9bad;
+            margin-bottom: 30px;
+        }
+
+
+        /* ==============================
+           TERMINAL
+           ============================== */
+
+        .terminal-container {
+            position: relative;
+        }
+
+        #terminal {
+            background-color: #000000;
+            border: 1px solid #263247;
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 16px;
+            line-height: 1.5;
+            min-height: 500px;
+            max-height: 650px;
+            overflow-y: auto;
+            padding: 30px;
+            white-space: pre-wrap;
+        }
+
+        #terminal strong {
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           SCROLL INDICATOR
+           ============================== */
+
+        #scroll-indicator {
+            color: #1597ff;
+            cursor: pointer;
+            display: none;
+            font-family: monospace;
+            font-size: 20px;
+            margin-top: 8px;
+            text-align: center;
+            user-select: none;
+        }
+
+        #scroll-indicator:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ==============================
+           COMMAND INPUT
+           ============================== */
+
+        #command {
+            background-color: #000000;
+            border: 1px solid #263247;
+            border-radius: 8px;
+            color: #ffffff;
+            display: none;
+            font-family: monospace;
+            font-size: 16px;
+            margin-top: 12px;
+            outline: none;
+            padding: 16px;
+            width: 100%;
+        }
+
+        #command:focus {
+            border-color: #1597ff;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="game-page">
+
+        <a class="back-link" href="../index.html">
+            ← Back to Portfolio
+        </a>
+
+        <h1>Basement Escape</h1>
+
+        <p class="subtitle">
+            A terminal-based escape room written in C.
+        </p>
+
+
+        <!-- TERMINAL -->
+        <div class="terminal-container">
+
+            <!-- IMPORTANT: Keep this div empty on one line.
+                 Whitespace inside it is preserved by the terminal. -->
+            <div id="terminal" tabindex="0"></div>
+
+            <div id="scroll-indicator">
+                ↓ Scroll to continue
+            </div>
+
+        </div>
+
+
+        <!-- PLAYER INPUT -->
+        <input
+            id="command"
+            type="text"
+            placeholder="Type a command and press Enter..."
+            autocomplete="off"
+        >
+
+    </main>
+
+
+    <script>
+
+        const terminal =
+            document.getElementById("terminal");
+
+        const commandInput =
+            document.getElementById("command");
+
+        const scrollIndicator =
+            document.getElementById("scroll-indicator");
+
+
+        /*
+         * Keeps track of whether the player
+         * has finished reading the introduction.
+         */
+        let gameReady = false;
+
+
+        /* =========================================
+           FORMAT TERMINAL TEXT
+           ========================================= */
+
+        function formatTerminalText(text) {
+
+            const safeText = text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+
+            return safeText.replace(
+                /\x1b\[1m(.*?)\x1b\[0m/g,
+                "<strong>$1</strong>"
+            );
+        }
+
+
+        /* =========================================
+           SHOW COMMAND BOX
+           ========================================= */
+
+        function enableGameInput() {
+
+            if (gameReady) {
+                return;
+            }
+
+            gameReady = true;
+
+            scrollIndicator.style.display = "none";
+
+            commandInput.style.display = "block";
+
+            commandInput.focus();
+        }
+
+
+        /* =========================================
+           CHECK TERMINAL POSITION
+           ========================================= */
+
+        function updateScrollIndicator() {
+
+            const distanceFromBottom =
+                terminal.scrollHeight -
+                terminal.scrollTop -
+                terminal.clientHeight;
+
+
+            /*
+             * Once the player reaches the bottom
+             * of the opening text, reveal the
+             * command input.
+             */
+
+            if (distanceFromBottom <= 10) {
+
+                enableGameInput();
+
+                return;
+            }
+
+
+            /*
+             * Otherwise tell the player that
+             * there is more text below.
+             */
+
+            if (!gameReady) {
+
+                scrollIndicator.style.display = "block";
+            }
+        }
+
+
+        /* =========================================
+           ADD C OUTPUT TO TERMINAL
+           ========================================= */
+
+        function addTerminalText(text) {
+
+            terminal.innerHTML +=
+                formatTerminalText(text) + "\n";
+        }
+
+
+        /* =========================================
+           EMSCRIPTEN
+           ========================================= */
+
+        var Module = {
+
+            print: function(text) {
+
+                addTerminalText(text);
+            },
+
+
+            onRuntimeInitialized: function() {
+
+                /*
+                 * Start the C game.
+                 */
+
+                Module.ccall(
+                    "startGame",
+                    null,
+                    [],
+                    []
+                );
+
+
+                /*
+                 * Start at the TOP of the terminal
+                 * so the player sees the title and
+                 * instructions first.
+                 */
+
+                terminal.scrollTop = 0;
+
+
+                /*
+                 * Determine whether scrolling
+                 * is required.
+                 */
+
+                updateScrollIndicator();
+            }
+        };
+
+
+        /* =========================================
+           WATCH TERMINAL SCROLLING
+           ========================================= */
+
+        terminal.addEventListener(
+            "scroll",
+            function() {
+
+                updateScrollIndicator();
+            }
+        );
+
+
+        /* =========================================
+           CLICK SCROLL INDICATOR
+           ========================================= */
+
+        scrollIndicator.addEventListener(
+            "click",
+            function() {
+
+                terminal.scrollBy({
+                    top: terminal.clientHeight * 0.75,
+                    behavior: "smooth"
+                });
+            }
+        );
+
+
+        /* =========================================
+           PLAYER COMMANDS
+           ========================================= */
+
+        commandInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    const command =
+                        commandInput.value.trim();
+
+
+                    /*
+                     * Ignore empty commands.
+                     */
+
+                    if (command === "") {
+                        return;
+                    }
+
+
+                    /*
+                     * Display player's command.
+                     */
+
+                    terminal.innerHTML +=
+                        "\n&gt; " +
+                        formatTerminalText(command) +
+                        "\n";
+
+
+                    /*
+                     * Send command to C.
+                     */
+
+                    Module.ccall(
+                        "processCommand",
+                        null,
+                        ["string"],
+                        [command]
+                    );
+
+
+                    /*
+                     * Clear input.
+                     */
+
+                    commandInput.value = "";
+
+
+                    /*
+                     * During normal gameplay,
+                     * automatically show the
+                     * newest terminal output.
+                     */
+
+                    terminal.scrollTop =
+                        terminal.scrollHeight;
+                }
+            }
+        );
+
+    </script>
+
+
+    <!-- Compiled C / WebAssembly game -->
+    <script src="basement.js"></script>
+
+</body>
+
+</html>

@@ -1,12 +1,454 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <title>Monica Abeyta | Portfolio</title>
-    </head>
+<html lang="en">
 
-    <body>
-        <h1>Monica Abeyta</h1>
-        <p>My portfolio is coming soon.</p>
-    </body>
+<head>
+    <!-- Information about the webpage -->
+    <meta charset="UTF-8">
+
+    <!-- Helps the site display correctly on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab wording -->
+    <title>Monica Abeyta | Portfolio</title>
+
+    <!-- Connect the CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         WEBSITE HEADER
+         ========================================= -->
+    <header>
+
+        <!-- Portfolio logo and name -->
+        <img class="header-brand"
+             src="images/logo-white-nameV2.png"
+             alt="Monica Abeyta">
+
+        <!-- Main navigation -->
+        <nav>
+
+            <a href="#about">About</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO SECTION
+         ========================================= -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-tagline">
+                EDIT | CREATE | BUILD
+            </p>
+
+            <h1>
+                Where Creative Work<br>
+                <span class="highlight">
+                    Meets Code<span class="blue-dot">.</span>
+                </span>
+            </h1>
+
+            <p class="hero-intro">
+                From post-production to programming — building<br>
+                on creative experience through computer science.
+            </p>
+
+            <a class="hero-button" href="#projects">
+                View My Work
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         DISCIPLINES
+         ========================================= -->
+    <section class="disciplines">
+
+        <div class="discipline">
+
+            <div class="discipline-icon blue">
+                ▶
+            </div>
+
+            <h2>Post Production</h2>
+
+            <p>
+                Editorial workflows and creative storytelling.
+            </p>
+
+        </div>
+
+
+        <div class="discipline">
+
+            <div class="discipline-icon blue">
+                &lt;/&gt;
+            </div>
+
+            <h2>Software Development</h2>
+
+            <p>
+                Building practical software and interactive experiences.
+            </p>
+
+        </div>
+
+
+        <div class="discipline">
+
+            <div class="discipline-icon yellow">
+                ▤
+            </div>
+
+            <h2>Systems &amp; Computing</h2>
+
+            <p>
+                Exploring infrastructure, automation and reliable systems.
+            </p>
+
+        </div>
+
+
+        <div class="discipline">
+
+            <div class="discipline-icon purple">
+                ✦
+            </div>
+
+            <h2>Creative Projects</h2>
+
+            <p>
+                Where technology, design and experimentation meet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT
+         ========================================= -->
+    <section class="about" id="about">
+
+        <p class="section-label">
+            ABOUT
+        </p>
+
+        <div class="about-grid">
+
+
+            <!-- About heading and portrait -->
+            <div class="about-heading">
+
+                <h2>
+                    Creative experience.<br>
+                    <span class="yellow">
+                        Technical thinking.
+                    </span>
+                </h2>
+
+                <img class="about-photo"
+                     src="images/Tux-photo.png"
+                     alt="Monica Abeyta">
+
+            </div>
+
+
+            <!-- Biography -->
+            <div class="about-content">
+
+                <p>
+                    I’m <strong>Monica Abeyta</strong>, originally from
+                    Los Angeles, California and now based in Cardiff,
+                    Wales. I spent more than 18 years working in
+                    television post-production, building a career around
+                    editorial workflows, technical problem-solving and
+                    creative collaboration.
+                </p>
+
+                <p>
+                    After nearly two decades in the industry, I decided
+                    to take that experience in a new direction. I’m
+                    currently studying for an MSc in Computer Science
+                    at the University of Bath, developing my skills in
+                    programming, software development, systems and
+                    infrastructure.
+                </p>
+
+                <p>
+                    My background in television taught me to work with
+                    complex workflows, technical systems and creative
+                    teams under real production pressures. I’m now
+                    applying that same way of thinking to software —
+                    breaking problems down, understanding how the pieces
+                    connect and building practical solutions.
+                </p>
+
+                <p>
+                    I’m particularly interested in work where creative
+                    thinking and technical problem-solving overlap,
+                    whether that means building software, improving
+                    workflows or figuring out how all the pieces of a
+                    system fit together.
+                </p>
+
+
+                <!-- Current technical interests -->
+                <div class="about-skills">
+
+                    <p class="about-skills-label">
+                        CURRENTLY EXPLORING
+                    </p>
+
+                    <p class="about-skills-list">
+                        C &nbsp;·&nbsp;
+                        Python &nbsp;·&nbsp;
+                        Software Development &nbsp;·&nbsp;
+                        Java
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FEATURED PROJECT
+         ========================================= -->
+    <section class="projects" id="projects">
+
+        <p class="section-label">
+            FEATURED PROJECT
+        </p>
+
+
+        <div class="project-card">
+
+
+            <!-- Project information -->
+            <div class="project-content">
+
+                <p class="project-type">
+                    C · TERMINAL APPLICATION
+                </p>
+
+                <h2>
+                    Basement Escape
+                </h2>
+
+                <p class="project-description">
+                    A terminal-based escape room built in C.
+                    Explore the basement, examine objects,
+                    solve interconnected puzzles and uncover
+                    the combination needed to escape.
+                </p>
+
+
+                <div class="project-links">
+
+                    <!-- Play WebAssembly version -->
+                    <a class="project-button"
+                       href="basement-escape-game/">
+                        Play in Browser
+                    </a>
+
+
+                    <!-- GitHub repository -->
+                    <a class="project-link"
+                       href="https://github.com/mmabeyta/Basement-Escape"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+
+
+                    <!-- Jump to project information -->
+                    <a class="project-link"
+                       href="#basement-escape">
+                        About the Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Terminal screenshot -->
+            <div class="project-preview">
+
+                <div class="terminal-bar">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <p>
+                        basement-escape
+                    </p>
+
+                </div>
+
+                <img src="images/basement-escape-terminal.png"
+                     alt="Basement Escape terminal game">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT BASEMENT ESCAPE
+         ========================================= -->
+    <section class="project-about"
+             id="basement-escape">
+
+        <p class="section-label">
+            ABOUT THE PROJECT
+        </p>
+
+
+        <div class="about-grid">
+
+
+            <!-- Main project story -->
+            <div class="about-main">
+
+                <h2>
+                    From Escape Room Concept to C Program
+                </h2>
+
+
+                <p>
+                    Basement Escape began as a graphical escape-room
+                    concept built in Scratch. It became my first major
+                    C project and I adapted the idea into a terminal-based
+                    text adventure, allowing me to focus on program logic,
+                    player input, puzzle design and game-state management.
+                </p>
+
+
+                <p>
+                    Rather than creating a fixed sequence of questions,
+                    I designed the basement to be explored freely.
+                    Players can investigate objects and discover clues
+                    in different orders, while the program tracks
+                    discoveries, solved puzzles and changing room
+                    states behind the scenes.
+                </p>
+
+
+                <p>
+                    Building the game pushed me beyond the C concepts
+                    I had already covered in my MSc. I researched and
+                    applied string comparison, full-line player input,
+                    case-insensitive commands, boolean game states
+                    and a multi-file program structure.
+                </p>
+
+            </div>
+
+
+            <!-- Project details -->
+            <div class="about-details">
+
+
+                <div class="detail-block">
+
+                    <h3>
+                        Built With
+                    </h3>
+
+                    <p>C</p>
+
+                    <p>Git &amp; GitHub</p>
+
+                    <p>Visual Studio</p>
+
+                    <p>WebAssembly</p>
+
+                    <p>Emscripten</p>
+
+                </div>
+
+
+                <div class="detail-block">
+
+                    <h3>
+                        Key Features
+                    </h3>
+
+                    <p>Free-form exploration</p>
+
+                    <p>Interconnected puzzles</p>
+
+                    <p>Game-state progression</p>
+
+                    <p>ASCII art</p>
+
+                    <p>Case-insensitive commands</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+    <footer>
+
+        <p>
+            &copy; 2026 Monica Abeyta. All rights reserved.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="https://github.com/mmabeyta"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
+            </a>
+
+
+            <a href="https://www.imdb.com/name/nm2152619/"
+               target="_blank"
+               rel="noopener noreferrer">
+                IMDb
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+
 </html>

@@ -1,0 +1,518 @@
+.blue {
+    color: #1597ff;
+}
+
+.blue-dot {
+    color: #1597ff;
+}
+
+body {
+    background-color: #08101f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    align-items: center;
+    display: flex;
+    height: 110px;
+    padding: 0 6%;
+}
+
+.header-brand {
+    display: block;
+    height: auto;
+    width: 350px;
+}
+
+.logo {
+    height: auto;
+    width: 300px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    color: #ffffff;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    background-image:
+
+        /* Fade bottom of hero into disciplines */
+        linear-gradient(
+            to bottom,
+            transparent 72%,
+            rgba(8, 16, 31, 0.15) 80%,
+            rgba(8, 16, 31, 0.55) 90%,
+            #08101f 100%
+        ),
+
+        /* Fade right edge */
+        linear-gradient(
+            to left,
+            #08101f 0%,
+            rgba(8, 16, 31, 0.75) 4%,
+            rgba(8, 16, 31, 0.35) 9%,
+            rgba(8, 16, 31, 0.10) 14%,
+            transparent 19%
+        ),
+
+        /* Fade left edge */
+        linear-gradient(
+            to right,
+            #08101f 0%,
+            rgba(8, 16, 31, 0.90) 8%,
+            rgba(8, 16, 31, 0.60) 16%,
+            rgba(8, 16, 31, 0.30) 25%,
+            rgba(8, 16, 31, 0.10) 34%,
+            transparent 43%
+        ),
+
+        url("images/MA-Logo-wide.png");
+
+    background-position:
+        center,
+        center,
+        center,
+        calc(50% + 300px) center;
+
+    background-repeat: no-repeat;
+
+    background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        auto 135%;
+
+    display: flex;
+    min-height: 500px;
+    padding: 40px 6% 0;
+}
+
+.hero-left {
+    align-self: center;
+}
+
+.hero-content {
+    max-width: 620px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 0.98;
+    margin: 20px 0 26px;
+}
+
+.hero-tagline {
+    color: #1597ff;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+.hero-intro {
+    color: #c5ccd8;
+    font-size: 17px;
+    line-height: 1.55;
+    max-width: 500px;
+}
+
+.hero-button {
+    background-color: #1597ff;
+    border-radius: 30px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 24px;
+    padding: 15px 28px;
+    text-decoration: none;
+}
+
+.highlight {
+    color: #ffd21c;
+}
+
+
+/* =========================================
+   DISCIPLINES
+   ========================================= */
+
+.disciplines {
+    border-bottom: 1px solid #263247;
+    border-top: 1px solid #263247;
+    display: flex;
+    padding: 26px 6%;
+}
+
+.discipline {
+    flex: 1;
+    padding: 22px 30px 28px;
+}
+
+.discipline + .discipline {
+    border-left: 1px solid #263247;
+}
+
+.discipline h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.discipline p {
+    color: #8f9bad;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.discipline-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.purple {
+    color: #a855f7;
+}
+
+.yellow {
+    color: #ffd21c;
+}
+
+
+/* =========================================
+   GENERAL SECTION LABEL
+   ========================================= */
+
+.section-label {
+    color: #8f9bad;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 20px;
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+    border-bottom: 1px solid #263247;
+    padding: 75px 6% 85px;
+}
+
+
+/*
+ * Main About layout:
+ * heading and portrait on the left,
+ * biography on the right.
+ */
+
+.about-grid {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr 1.4fr;
+    margin-top: 25px;
+}
+
+.about-heading h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+}
+
+
+/*
+ * Portfolio portrait
+ */
+
+.about-photo {
+    border: 1px solid #263247;
+    border-radius: 12px;
+    display: block;
+    height: auto;
+
+    /* More breathing room below the heading */
+    margin: 40px auto 0;
+
+    /* Portrait size */
+    max-width: 400px;
+    width: 100%;
+}
+
+
+/*
+ * Biography stays as ONE text column.
+ */
+
+.about-content {
+    display: block;
+    max-width: 850px;
+}
+
+.about-content > p {
+    color: #c5ccd8;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 24px;
+}
+
+.about-content strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/*
+ * Currently Exploring
+ */
+
+.about-skills {
+    border-top: 1px solid #263247;
+    margin-top: 35px;
+    padding-top: 22px;
+}
+
+.about-skills .about-skills-label {
+    color: #1597ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+
+.about-skills .about-skills-list {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* =========================================
+   FEATURED PROJECT
+   ========================================= */
+
+.projects {
+    padding: 70px 6%;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin: 10px 0 18px;
+}
+
+.project-card {
+    align-items: center;
+    border: 1px solid #263247;
+    border-radius: 12px;
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.project-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.project-type {
+    color: #1597ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-description {
+    color: #c5ccd8;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.project-links {
+    align-items: center;
+    display: flex;
+    gap: 25px;
+    margin-top: 28px;
+}
+
+.project-button {
+    background-color: #1597ff;
+    border-radius: 30px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    padding: 14px 24px;
+    text-decoration: none;
+}
+
+.project-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   PROJECT PREVIEW
+   ========================================= */
+
+.project-preview {
+    background-color: #000000;
+    border: 1px solid #263247;
+    border-radius: 10px;
+    flex: 0 1 520px;
+    overflow: hidden;
+}
+
+.project-preview img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.terminal-bar {
+    align-items: center;
+    background-color: #151b27;
+    display: flex;
+    gap: 7px;
+    height: 34px;
+    padding: 0 12px;
+}
+
+.terminal-bar span {
+    background-color: #8f9bad;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+.terminal-bar p {
+    color: #8f9bad;
+    font-family: monospace;
+    font-size: 11px;
+    margin: 0 0 0 8px;
+}
+
+
+/* =========================================
+   ABOUT BASEMENT ESCAPE
+   ========================================= */
+
+.project-about {
+    border-top: 1px solid #263247;
+    padding: 70px 6%;
+}
+
+
+/*
+ * The project-about section also uses
+ * .about-grid from above.
+ */
+
+.about-main {
+    max-width: 750px;
+}
+
+.about-main h2 {
+    font-size: 32px;
+    margin: 0 0 25px;
+}
+
+.about-main p {
+    color: #c5ccd8;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.about-details {
+    border-left: 1px solid #263247;
+    padding-left: 40px;
+}
+
+.detail-block {
+    margin-bottom: 35px;
+}
+
+.detail-block h3 {
+    color: #1597ff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+
+.detail-block p {
+    color: #c5ccd8;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+   ========================================= */
+
+#scroll-indicator {
+    color: #1597ff;
+    cursor: pointer;
+    display: none;
+    font-family: monospace;
+    font-size: 40px;
+    margin-top: 8px;
+    text-align: center;
+    user-select: none;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 6%;
+}
+
+footer p {
+    color: #8f9bad;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #8f9bad;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #1597ff;
+}
