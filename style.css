@@ -516,3 +516,223 @@ footer p {
 .footer-links a:hover {
     color: #1597ff;
 }
+
+/* =========================================
+   EXPERIENCE
+   ========================================= */
+
+.experience {
+    border-top: 1px solid #263247;
+    padding: 80px 6% 85px;
+}
+
+.experience-grid {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr 1.4fr;
+    margin-top: 25px;
+}
+
+
+/* Left side */
+
+.experience-heading {
+    max-width: 480px;
+}
+
+.experience-years {
+    color: #1597ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 0 0 18px;
+}
+
+.experience-heading h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.experience-intro {
+    color: #8f9bad;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 28px;
+    max-width: 400px;
+}
+
+
+/* Timeline */
+
+.experience-timeline {
+    border-left: 1px solid #263247;
+    padding-left: 45px;
+}
+
+.experience-item {
+    border-bottom: 1px solid #263247;
+    padding: 0 0 32px;
+    margin-bottom: 32px;
+}
+
+.experience-date {
+    color: #1597ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 10px;
+}
+
+.experience-item h3 {
+    font-size: 24px;
+    margin: 0 0 7px;
+}
+
+.experience-company {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+
+.experience-summary {
+    color: #8f9bad;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.experience-link {
+    color: #1597ff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.experience-link:hover {
+    text-decoration: underline;
+}
+
+/* Technology & Workflows */
+
+.experience-tools {
+    border-top: 1px solid #263247;
+    margin-top: 45px;
+    padding-top: 28px;
+    max-width: 480px;
+}
+
+.experience-tools-label {
+    color: #1597ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 16px;
+}
+
+.experience-tools-list {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2;
+    margin: 0;
+}
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact {
+    border-top: 1px solid #263247;
+    padding: 75px 6% 90px;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 1.4fr;
+    margin-top: 25px;
+}
+
+.contact-intro {
+    max-width: 520px;
+}
+
+.contact-intro h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 30px;
+}
+
+.contact-intro > p {
+    color: #c5ccd8;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 450px;
+}
+
+.contact-location {
+    color: #1597ff !important;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+/* Contact form */
+
+.contact-form {
+    max-width: 700px;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    color: #1597ff;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #0c1525;
+    border: 1px solid #263247;
+    border-radius: 7px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1597ff;
+}
+
+.contact-button {
+    background-color: #1597ff;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 28px;
+}
+
+.contact-button:hover {
+    opacity: 0.9;
+}
