@@ -218,13 +218,6 @@ nav a {
     padding: 75px 6% 85px;
 }
 
-
-/*
- * Main About layout:
- * heading and portrait on the left,
- * biography on the right.
- */
-
 .about-grid {
     display: grid;
     gap: 80px;
@@ -240,28 +233,20 @@ nav a {
 }
 
 
-/*
- * Portfolio portrait
- */
+/* Portfolio portrait */
 
 .about-photo {
     border: 1px solid #263247;
     border-radius: 12px;
     display: block;
     height: auto;
-
-    /* More breathing room below the heading */
     margin: 40px auto 0;
-
-    /* Portrait size */
     max-width: 400px;
     width: 100%;
 }
 
 
-/*
- * Biography stays as ONE text column.
- */
+/* Biography */
 
 .about-content {
     display: block;
@@ -281,9 +266,7 @@ nav a {
 }
 
 
-/*
- * Currently Exploring
- */
+/* Currently Exploring */
 
 .about-skills {
     border-top: 1px solid #263247;
@@ -424,12 +407,6 @@ nav a {
     padding: 70px 6%;
 }
 
-
-/*
- * The project-about section also uses
- * .about-grid from above.
- */
-
 .about-main {
     max-width: 750px;
 }
@@ -486,38 +463,6 @@ nav a {
 
 
 /* =========================================
-   FOOTER
-   ========================================= */
-
-footer {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 24px 6%;
-}
-
-footer p {
-    color: #8f9bad;
-    font-size: 13px;
-    margin: 0;
-}
-
-.footer-links {
-    display: flex;
-    gap: 24px;
-}
-
-.footer-links a {
-    color: #8f9bad;
-    font-size: 13px;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #1597ff;
-}
-
-/* =========================================
    EXPERIENCE
    ========================================= */
 
@@ -572,8 +517,8 @@ footer p {
 
 .experience-item {
     border-bottom: 1px solid #263247;
-    padding: 0 0 32px;
     margin-bottom: 32px;
+    padding: 0 0 32px;
 }
 
 .experience-date {
@@ -616,13 +561,14 @@ footer p {
     text-decoration: underline;
 }
 
+
 /* Technology & Workflows */
 
 .experience-tools {
     border-top: 1px solid #263247;
     margin-top: 45px;
-    padding-top: 28px;
     max-width: 480px;
+    padding-top: 28px;
 }
 
 .experience-tools-label {
@@ -640,6 +586,7 @@ footer p {
     line-height: 2;
     margin: 0;
 }
+
 
 /* =========================================
    CONTACT
@@ -683,8 +630,14 @@ footer p {
 
 /* Contact form */
 
+.contact-form-wrapper {
+    max-width: 700px;
+    width: 100%;
+}
+
 .contact-form {
     max-width: 700px;
+    width: 100%;
 }
 
 .form-group {
@@ -705,6 +658,7 @@ footer p {
     background-color: #0c1525;
     border: 1px solid #263247;
     border-radius: 7px;
+    box-sizing: border-box;
     color: #ffffff;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -736,6 +690,48 @@ footer p {
 .contact-button:hover {
     opacity: 0.9;
 }
+
+
+/* =========================================
+   CONTACT FORM MESSAGES
+   ========================================= */
+
+.form-success {
+    background-color: rgba(21, 151, 255, 0.10);
+    border: 1px solid #1597ff;
+    border-radius: 8px;
+    color: #ffffff;
+    display: none;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    padding: 18px 20px;
+}
+
+.form-error {
+    color: #ff6b6b;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.field-error {
+    color: #ff6b6b;
+    display: block;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #ff6b6b;
+}
+
+.contact-button:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
+
 
 /* =========================================
    CONTACT SUCCESS PAGE
@@ -774,252 +770,47 @@ footer p {
     max-width: 500px;
 }
 
+
 /* =========================================
-   MOBILE / TABLET
+   FOOTER
    ========================================= */
 
-@media (max-width: 800px) {
-
-    /* -----------------------------------------
-       GENERAL
-       ----------------------------------------- */
-
-    body {
-        overflow-x: hidden;
-    }
-
-
-    /* -----------------------------------------
-       HEADER
-       ----------------------------------------- */
-
-    header {
-        align-items: center;
-        flex-direction: column;
-        height: auto;
-        padding: 25px 6%;
-    }
-
-    .header-brand {
-        max-width: 300px;
-        width: 85%;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-        justify-content: center;
-        margin-left: 0;
-        margin-top: 25px;
-    }
-
-    nav a {
-        margin-left: 0;
-    }
-
-
-    /* -----------------------------------------
-       HERO
-       ----------------------------------------- */
-
-    .hero {
-        background-position:
-            center,
-            center,
-            center,
-            center;
-
-        background-size:
-            100% 100%,
-            100% 100%,
-            100% 100%,
-            auto 90%;
-
-        min-height: 520px;
-        padding: 70px 7%;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-        line-height: 1.05;
-    }
-
-    .hero-intro {
-        font-size: 16px;
-    }
-
-
-    /* -----------------------------------------
-       DISCIPLINES
-       ----------------------------------------- */
-
-    .disciplines {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 20px 6%;
-    }
-
-    .discipline {
-        padding: 25px 20px;
-    }
-
-    .discipline + .discipline {
-        border-left: none;
-    }
-
-    .discipline:nth-child(even) {
-        border-left: 1px solid #263247;
-    }
-
-    .discipline:nth-child(n+3) {
-        border-top: 1px solid #263247;
-    }
-
-
-    /* -----------------------------------------
-       ABOUT
-       ----------------------------------------- */
-
-    .about-grid {
-        gap: 45px;
-        grid-template-columns: 1fr;
-    }
-
-    .about-heading h2 {
-        font-size: 36px;
-    }
-
-    .about-photo {
-        max-width: 360px;
-    }
-
-
-    /* -----------------------------------------
-       FEATURED PROJECT
-       ----------------------------------------- */
-
-    .project-card {
-        align-items: stretch;
-        flex-direction: column;
-        gap: 40px;
-        padding: 30px;
-    }
-
-    .project-content {
-        max-width: none;
-    }
-
-    .project-preview {
-        flex: none;
-        width: 100%;
-    }
-
-    .project-links {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-
-    /* -----------------------------------------
-       PROJECT DETAILS
-       ----------------------------------------- */
-
-    .about-details {
-        border-left: none;
-        border-top: 1px solid #263247;
-        padding-left: 0;
-        padding-top: 35px;
-    }
-
-
-    /* -----------------------------------------
-       EXPERIENCE
-       ----------------------------------------- */
-
-    .experience-grid {
-        gap: 55px;
-        grid-template-columns: 1fr;
-    }
-
-    .experience-heading {
-        max-width: none;
-    }
-
-    .experience-heading h2 {
-        font-size: 36px;
-    }
-
-    .experience-intro {
-        max-width: 600px;
-    }
-
-    .experience-tools {
-        max-width: 600px;
-    }
-
-    .experience-timeline {
-        border-left: none;
-        border-top: 1px solid #263247;
-        padding-left: 0;
-        padding-top: 40px;
-    }
-
-
-    /* -----------------------------------------
-       CONTACT
-       ----------------------------------------- */
-
-    .contact-grid {
-        gap: 50px;
-        grid-template-columns: 1fr;
-    }
-
-    .contact-intro {
-        max-width: none;
-    }
-
-    .contact-intro h2 {
-        font-size: 36px;
-    }
-
-    .contact-form {
-        max-width: none;
-    }
-
-
-    /* -----------------------------------------
-       FOOTER
-       ----------------------------------------- */
-
-    footer {
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-
-    /* -----------------------------------------
-       SUCCESS PAGE
-       ----------------------------------------- */
-
-    .thanks-content h1 {
-        font-size: 42px;
-    }
-
+footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 6%;
 }
 
+footer p {
+    color: #8f9bad;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #8f9bad;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #1597ff;
+}
+
+
 /* =========================================
    MOBILE / TABLET
    ========================================= */
 
 @media (max-width: 800px) {
 
-    /* -----------------------------------------
-       GENERAL
-       ----------------------------------------- */
+    /* GENERAL */
 
     * {
         box-sizing: border-box;
@@ -1034,9 +825,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       HEADER
-       ----------------------------------------- */
+    /* HEADER */
 
     header {
         align-items: center;
@@ -1065,24 +854,27 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       HERO
-       ----------------------------------------- */
+    /* HERO */
 
     .hero {
         background-image:
 
+            /* Fade hero into section below */
             linear-gradient(
                 to bottom,
-                rgba(8, 16, 31, 0.05) 55%,
-                rgba(8, 16, 31, 0.45) 82%,
+                rgba(8, 16, 31, 0.05) 45%,
+                rgba(8, 16, 31, 0.25) 65%,
+                rgba(8, 16, 31, 0.65) 88%,
                 #08101f 100%
             ),
 
+            /* Dark reading area behind mobile text */
             linear-gradient(
                 to right,
-                rgba(8, 16, 31, 0.75) 0%,
-                rgba(8, 16, 31, 0.35) 45%,
+                rgba(8, 16, 31, 0.94) 0%,
+                rgba(8, 16, 31, 0.86) 35%,
+                rgba(8, 16, 31, 0.60) 62%,
+                rgba(8, 16, 31, 0.25) 82%,
                 rgba(8, 16, 31, 0.10) 100%
             ),
 
@@ -1121,6 +913,7 @@ footer p {
     }
 
     .hero-intro {
+        color: #d8dee8;
         font-size: 16px;
         line-height: 1.6;
         max-width: 430px;
@@ -1131,9 +924,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       DISCIPLINES
-       ----------------------------------------- */
+    /* DISCIPLINES */
 
     .disciplines {
         display: grid;
@@ -1167,9 +958,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       ABOUT
-       ----------------------------------------- */
+    /* ABOUT */
 
     .about {
         padding: 60px 7% 70px;
@@ -1217,9 +1006,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       FEATURED PROJECT
-       ----------------------------------------- */
+    /* FEATURED PROJECT */
 
     .projects {
         padding: 60px 7%;
@@ -1270,9 +1057,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       ABOUT PROJECT
-       ----------------------------------------- */
+    /* ABOUT PROJECT */
 
     .project-about {
         padding: 60px 7%;
@@ -1314,9 +1099,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       EXPERIENCE
-       ----------------------------------------- */
+    /* EXPERIENCE */
 
     .experience {
         padding: 60px 7% 70px;
@@ -1373,14 +1156,8 @@ footer p {
         font-size: 14px;
     }
 
-    .experience-link {
-        color: #1597ff;
-    }
 
-
-    /* -----------------------------------------
-       CONTACT
-       ----------------------------------------- */
+    /* CONTACT */
 
     .contact {
         padding: 60px 7% 70px;
@@ -1406,6 +1183,7 @@ footer p {
         max-width: none;
     }
 
+    .contact-form-wrapper,
     .contact-form {
         max-width: none;
         width: 100%;
@@ -1418,7 +1196,6 @@ footer p {
 
     .form-group input,
     .form-group textarea {
-        box-sizing: border-box;
         display: block;
         font-size: 16px;
         padding: 15px;
@@ -1435,9 +1212,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       FOOTER
-       ----------------------------------------- */
+    /* FOOTER */
 
     footer {
         align-items: center;
@@ -1452,9 +1227,7 @@ footer p {
     }
 
 
-    /* -----------------------------------------
-       SUCCESS PAGE
-       ----------------------------------------- */
+    /* SUCCESS PAGE */
 
     .thanks-page {
         box-sizing: border-box;
@@ -1470,7 +1243,6 @@ footer p {
     .thanks-content h1 {
         font-size: 42px;
     }
-
 }
 
 
@@ -1503,6 +1275,28 @@ footer p {
     /* HERO */
 
     .hero {
+        background-image:
+
+            /* Bottom fade */
+            linear-gradient(
+                to bottom,
+                rgba(8, 16, 31, 0.08) 40%,
+                rgba(8, 16, 31, 0.30) 65%,
+                rgba(8, 16, 31, 0.72) 88%,
+                #08101f 100%
+            ),
+
+            /* Stronger reading area for narrow screens */
+            linear-gradient(
+                to right,
+                rgba(8, 16, 31, 0.96) 0%,
+                rgba(8, 16, 31, 0.88) 45%,
+                rgba(8, 16, 31, 0.62) 72%,
+                rgba(8, 16, 31, 0.25) 100%
+            ),
+
+            url("images/MA-Logo-wide.png");
+
         min-height: 540px;
         padding: 55px 7% 45px;
     }
@@ -1514,6 +1308,10 @@ footer p {
     .hero-tagline {
         font-size: 11px;
         letter-spacing: 3px;
+    }
+
+    .hero-intro {
+        color: #e0e5ed;
     }
 
     .hero-intro br {
@@ -1641,4 +1439,7 @@ footer p {
         font-size: 36px;
     }
 
+    .cf-turnstile {
+    margin-bottom: 24px;
+    }
 }
