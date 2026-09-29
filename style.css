@@ -736,3 +736,909 @@ footer p {
 .contact-button:hover {
     opacity: 0.9;
 }
+
+/* =========================================
+   CONTACT SUCCESS PAGE
+   ========================================= */
+
+.thanks-page {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.thanks-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.thanks-logo {
+    height: auto;
+    margin-bottom: 60px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.thanks-content h1 {
+    font-size: 58px;
+    margin: 0 0 25px;
+}
+
+.thanks-content > p:not(.section-label) {
+    color: #c5ccd8;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 auto 15px;
+    max-width: 500px;
+}
+
+/* =========================================
+   MOBILE / TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    /* -----------------------------------------
+       GENERAL
+       ----------------------------------------- */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+       ----------------------------------------- */
+
+    header {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        padding: 25px 6%;
+    }
+
+    .header-brand {
+        max-width: 300px;
+        width: 85%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+
+    /* -----------------------------------------
+       HERO
+       ----------------------------------------- */
+
+    .hero {
+        background-position:
+            center,
+            center,
+            center,
+            center;
+
+        background-size:
+            100% 100%,
+            100% 100%,
+            100% 100%,
+            auto 90%;
+
+        min-height: 520px;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.05;
+    }
+
+    .hero-intro {
+        font-size: 16px;
+    }
+
+
+    /* -----------------------------------------
+       DISCIPLINES
+       ----------------------------------------- */
+
+    .disciplines {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 6%;
+    }
+
+    .discipline {
+        padding: 25px 20px;
+    }
+
+    .discipline + .discipline {
+        border-left: none;
+    }
+
+    .discipline:nth-child(even) {
+        border-left: 1px solid #263247;
+    }
+
+    .discipline:nth-child(n+3) {
+        border-top: 1px solid #263247;
+    }
+
+
+    /* -----------------------------------------
+       ABOUT
+       ----------------------------------------- */
+
+    .about-grid {
+        gap: 45px;
+        grid-template-columns: 1fr;
+    }
+
+    .about-heading h2 {
+        font-size: 36px;
+    }
+
+    .about-photo {
+        max-width: 360px;
+    }
+
+
+    /* -----------------------------------------
+       FEATURED PROJECT
+       ----------------------------------------- */
+
+    .project-card {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px;
+    }
+
+    .project-content {
+        max-width: none;
+    }
+
+    .project-preview {
+        flex: none;
+        width: 100%;
+    }
+
+    .project-links {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+
+    /* -----------------------------------------
+       PROJECT DETAILS
+       ----------------------------------------- */
+
+    .about-details {
+        border-left: none;
+        border-top: 1px solid #263247;
+        padding-left: 0;
+        padding-top: 35px;
+    }
+
+
+    /* -----------------------------------------
+       EXPERIENCE
+       ----------------------------------------- */
+
+    .experience-grid {
+        gap: 55px;
+        grid-template-columns: 1fr;
+    }
+
+    .experience-heading {
+        max-width: none;
+    }
+
+    .experience-heading h2 {
+        font-size: 36px;
+    }
+
+    .experience-intro {
+        max-width: 600px;
+    }
+
+    .experience-tools {
+        max-width: 600px;
+    }
+
+    .experience-timeline {
+        border-left: none;
+        border-top: 1px solid #263247;
+        padding-left: 0;
+        padding-top: 40px;
+    }
+
+
+    /* -----------------------------------------
+       CONTACT
+       ----------------------------------------- */
+
+    .contact-grid {
+        gap: 50px;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-intro {
+        max-width: none;
+    }
+
+    .contact-intro h2 {
+        font-size: 36px;
+    }
+
+    .contact-form {
+        max-width: none;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+       ----------------------------------------- */
+
+    footer {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       SUCCESS PAGE
+       ----------------------------------------- */
+
+    .thanks-content h1 {
+        font-size: 42px;
+    }
+
+}
+
+/* =========================================
+   MOBILE / TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    /* -----------------------------------------
+       GENERAL
+       ----------------------------------------- */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+       ----------------------------------------- */
+
+    header {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        padding: 22px 7% 20px;
+    }
+
+    .header-brand {
+        height: auto;
+        max-width: 330px;
+        width: 90%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+        justify-content: center;
+        margin: 20px 0 0;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+
+    /* -----------------------------------------
+       HERO
+       ----------------------------------------- */
+
+    .hero {
+        background-image:
+
+            linear-gradient(
+                to bottom,
+                rgba(8, 16, 31, 0.05) 55%,
+                rgba(8, 16, 31, 0.45) 82%,
+                #08101f 100%
+            ),
+
+            linear-gradient(
+                to right,
+                rgba(8, 16, 31, 0.75) 0%,
+                rgba(8, 16, 31, 0.35) 45%,
+                rgba(8, 16, 31, 0.10) 100%
+            ),
+
+            url("images/MA-Logo-wide.png");
+
+        background-position:
+            center,
+            center,
+            center;
+
+        background-repeat: no-repeat;
+
+        background-size:
+            100% 100%,
+            100% 100%,
+            cover;
+
+        min-height: 560px;
+        padding: 65px 7% 55px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .hero-tagline {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+        line-height: 1;
+        margin: 20px 0 25px;
+    }
+
+    .hero-intro {
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 430px;
+    }
+
+    .hero-button {
+        margin-top: 20px;
+    }
+
+
+    /* -----------------------------------------
+       DISCIPLINES
+       ----------------------------------------- */
+
+    .disciplines {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 7%;
+    }
+
+    .discipline {
+        min-width: 0;
+        padding: 30px 22px;
+    }
+
+    .discipline + .discipline {
+        border-left: none;
+    }
+
+    .discipline:nth-child(even) {
+        border-left: 1px solid #263247;
+    }
+
+    .discipline:nth-child(n+3) {
+        border-top: 1px solid #263247;
+    }
+
+    .discipline h2 {
+        font-size: 17px;
+    }
+
+    .discipline p {
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------
+       ABOUT
+       ----------------------------------------- */
+
+    .about {
+        padding: 60px 7% 70px;
+    }
+
+    .about-grid {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
+
+    .about-heading {
+        width: 100%;
+    }
+
+    .about-heading h2 {
+        font-size: 36px;
+        line-height: 1.1;
+        text-align: left;
+    }
+
+    .about-photo {
+        margin: 35px auto 0;
+        max-width: 380px;
+        width: 100%;
+    }
+
+    .about-content {
+        max-width: none;
+        width: 100%;
+    }
+
+    .about-content > p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .about-skills {
+        margin-top: 35px;
+    }
+
+    .about-skills .about-skills-list {
+        line-height: 1.8;
+    }
+
+
+    /* -----------------------------------------
+       FEATURED PROJECT
+       ----------------------------------------- */
+
+    .projects {
+        padding: 60px 7%;
+    }
+
+    .project-card {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 35px;
+        padding: 30px;
+    }
+
+    .project-content {
+        max-width: none;
+        width: 100%;
+    }
+
+    .projects h2 {
+        font-size: 34px;
+    }
+
+    .project-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .project-links {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 28px;
+    }
+
+    .project-button,
+    .project-link {
+        width: fit-content;
+    }
+
+    .project-preview {
+        flex: none;
+        max-width: none;
+        width: 100%;
+    }
+
+    .project-preview img {
+        height: auto;
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       ABOUT PROJECT
+       ----------------------------------------- */
+
+    .project-about {
+        padding: 60px 7%;
+    }
+
+    .project-about .about-grid {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 1fr;
+    }
+
+    .about-main {
+        max-width: none;
+        width: 100%;
+    }
+
+    .about-main h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .about-main p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .about-details {
+        border-left: none;
+        border-top: 1px solid #263247;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 0;
+        padding-top: 35px;
+    }
+
+    .detail-block {
+        margin-bottom: 0;
+    }
+
+
+    /* -----------------------------------------
+       EXPERIENCE
+       ----------------------------------------- */
+
+    .experience {
+        padding: 60px 7% 70px;
+    }
+
+    .experience-grid {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
+
+    .experience-heading {
+        max-width: none;
+        width: 100%;
+    }
+
+    .experience-heading h2 {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    .experience-intro {
+        font-size: 15px;
+        max-width: none;
+    }
+
+    .experience-tools {
+        max-width: none;
+    }
+
+    .experience-tools-list {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .experience-timeline {
+        border-left: none;
+        border-top: 1px solid #263247;
+        padding-left: 0;
+        padding-top: 40px;
+    }
+
+    .experience-item {
+        margin-bottom: 28px;
+        padding-bottom: 28px;
+    }
+
+    .experience-item h3 {
+        font-size: 21px;
+    }
+
+    .experience-summary {
+        font-size: 14px;
+    }
+
+    .experience-link {
+        color: #1597ff;
+    }
+
+
+    /* -----------------------------------------
+       CONTACT
+       ----------------------------------------- */
+
+    .contact {
+        padding: 60px 7% 70px;
+    }
+
+    .contact-grid {
+        display: grid;
+        gap: 45px;
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
+
+    .contact-intro {
+        max-width: none;
+        width: 100%;
+    }
+
+    .contact-intro h2 {
+        font-size: 36px;
+    }
+
+    .contact-intro > p {
+        max-width: none;
+    }
+
+    .contact-form {
+        max-width: none;
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        box-sizing: border-box;
+        display: block;
+        font-size: 16px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .form-group textarea {
+        min-height: 160px;
+    }
+
+    .contact-button {
+        font-size: 15px;
+        padding: 15px 28px;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+       ----------------------------------------- */
+
+    footer {
+        align-items: center;
+        flex-direction: column;
+        gap: 18px;
+        padding: 30px 7%;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+
+    /* -----------------------------------------
+       SUCCESS PAGE
+       ----------------------------------------- */
+
+    .thanks-page {
+        box-sizing: border-box;
+        min-height: 100vh;
+        padding: 30px 7%;
+    }
+
+    .thanks-logo {
+        margin-bottom: 40px;
+        max-width: 300px;
+    }
+
+    .thanks-content h1 {
+        font-size: 42px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    /* HEADER */
+
+    header {
+        padding: 20px 7%;
+    }
+
+    .header-brand {
+        width: 100%;
+    }
+
+    nav {
+        gap: 10px 18px;
+        margin-top: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 540px;
+        padding: 55px 7% 45px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-tagline {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .hero-intro br {
+        display: none;
+    }
+
+
+    /* DISCIPLINES */
+
+    .disciplines {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 7%;
+    }
+
+    .discipline {
+        border-left: none !important;
+        border-top: 1px solid #263247;
+        padding: 28px 5px;
+    }
+
+    .discipline:first-child {
+        border-top: none;
+    }
+
+    .discipline h2 {
+        font-size: 18px;
+    }
+
+    .discipline p {
+        font-size: 14px;
+    }
+
+
+    /* SECTION SPACING */
+
+    .about,
+    .projects,
+    .project-about,
+    .experience,
+    .contact {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+
+    /* ABOUT */
+
+    .about-heading h2 {
+        font-size: 32px;
+    }
+
+    .about-photo {
+        max-width: 100%;
+    }
+
+
+    /* FEATURED PROJECT */
+
+    .project-card {
+        padding: 22px;
+    }
+
+    .projects h2 {
+        font-size: 31px;
+    }
+
+    .project-links {
+        align-items: stretch;
+    }
+
+    .project-button {
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+    }
+
+    .project-link {
+        padding: 4px 0;
+    }
+
+
+    /* PROJECT DETAILS */
+
+    .about-main h2 {
+        font-size: 28px;
+    }
+
+    .about-details {
+        display: grid;
+        gap: 35px;
+        grid-template-columns: 1fr;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-heading h2 {
+        font-size: 32px;
+    }
+
+    .experience-item h3 {
+        font-size: 20px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-intro h2 {
+        font-size: 32px;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+
+
+    /* SUCCESS PAGE */
+
+    .thanks-page {
+        padding: 25px 7%;
+    }
+
+    .thanks-content h1 {
+        font-size: 36px;
+    }
+
+}
